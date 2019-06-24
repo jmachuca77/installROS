@@ -111,9 +111,47 @@ done
 # sudo apt-get install ros-melodic-PACKAGE
 # e.g.
 # sudo apt-get install ros-melodic-navigation
-#
+
+
+sudo apt install -y ros-melodic-navigation
+sudo apt-get install ros-melodic-xacro -y
+sudo apt-get install ros-melodic-robot-state-publisher -y
+sudo apt-get install ros-melodic-joint-state-controller -y
+sudo apt-get install ros-melodic-diff-drive-controller -y
+sudo apt install -y ros-melodic-robot-localization
+sudo apt install -y ros-melodic-twist-mux
+sudo apt-get install ros-melodic-interactive-marker-twist-server -y
+sudo apt install -y ros-melodic-opencv-apps
+sudo apt-get install ros-melodic-gazebo-ros -y
+sudo apt-get install ros-melodic-gmapping -y
+sudo apt install -y ros-melodic-joy
+sudo apt-get install ros-melodic-diagnostic-aggregator -y
+sudo apt install -y ros-melodic-teleop-twist-keyboard
+sudo apt install -y ros-melodic-teleop-twist-joy
+sudo apt-get install ros-melodic-image-transport -y
+sudo apt-get install ros-melodic-joint-trajectory-controller -y
+sudo apt-get install ros-melodic-joint-limits-interface -y
+sudo apt-get install ros-melodic-controller-manager -y
+sudo apt-get install ros-melodic-razor-imu-9dof -y
+sudo apt install -y ros-melodic-imu-transformer
+sudo apt install -y ros-melodic-serial
+sudo apt-get install ros-melodic-rviz-imu-plugin -y
 # To find available packages:
 # apt-cache search ros-melodic
+sudo apt install -y ros-melodic-mavros
+sudo apt-get install ros-melodic-mavros-extras -y
+sudo apt install -y ros-melodic-rqt
+sudo apt-get install ros-melodic-rqt-common-plugins -y
+sudo apt-get install ros-melodic-rqt-robot-plugins -y
+sudo apt-get install ros-melodic-depthimage-to-laserscan -y
+sudo apt-get install ros-melodic-frontier-exploration -y
+sudo apt-get install ros-melodic-tf -y
+sudo apt-get install ros-melodic-tf-conversions -y
+sudo apt-get install ros-melodic-laser-geometry -y 
+sudo apt-get install ros-melodic-cv-bridge -y 
+sudo apt-get install ros-melodic-image-transport 
+sudo apt-get install libpcl1 -y
+sudo apt-get install ros-melodic-pcl-ros -y
 # 
 # Initialize rosdep
 tput setaf 2
@@ -127,6 +165,7 @@ sudo apt-get install python-rosdep -y
 tput setaf 2
 echo "Initializaing rosdep"
 tput sgr0
+sudo rm /etc/ros/rosdep/sources.list.d/20-default.list && echo "OK" || echo "No 20-default.list file"
 sudo rosdep init
 # To find available packages, use:
 rosdep update
@@ -137,7 +176,7 @@ source ~/.bashrc
 tput setaf 2
 echo "Installing rosinstall tools"
 tput sgr0
-sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential -y
+sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool python-catkin-tools build-essential -y
 tput setaf 2
 echo "Installation complete!"
 tput sgr0
